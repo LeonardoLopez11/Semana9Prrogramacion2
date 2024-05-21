@@ -1,3 +1,4 @@
+using GameJolt.API;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,12 +33,14 @@ public class LevelManagerr : MonoBehaviour
 
     void LoadNextLevel()
     {
+        Trophies.Unlock(233702);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
     void LoadVictoryScene()
     {
+        Trophies.Unlock(233086);
         SceneManager.LoadScene("Victory");
     }
 }

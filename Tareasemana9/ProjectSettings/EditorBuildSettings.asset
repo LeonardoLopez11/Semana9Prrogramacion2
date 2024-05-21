@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Victory.unity
     guid: b6a880b4785e22742b6d25c0662d827a
+  - enabled: 1
+    path: Assets/Scenes/Derrota.unity
+    guid: e4943d7df19b86a438354042c10fe8bf
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 7206f524534b0bb40810791067fac219
   m_configObjects: {}

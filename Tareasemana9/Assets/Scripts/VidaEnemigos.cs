@@ -1,3 +1,4 @@
+using GameJolt.API;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,7 @@ public class VidaEnemigos : MonoBehaviour
 
     void Die()
     {
+        Trophies.Unlock(233082);
         levelManager.EnemyKilled();
         Destroy(gameObject);
     }

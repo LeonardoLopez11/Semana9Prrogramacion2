@@ -1,6 +1,8 @@
+using GameJolt.API;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VidaPlayer : MonoBehaviour
 {
@@ -16,19 +18,24 @@ public class VidaPlayer : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(40);
+            TakeDamage(10);
         }
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         Debug.Log("Player Health: " + currentHealth);
 
         if (currentHealth <= 0)
         {
-            Debug.Log("Game over");
-            
+            Die();
         }
+    }
+
+    void Die()
+    {
+        Trophies.Unlock(233701);
+        SceneManager.LoadScene("Derrota");
     }
 }
