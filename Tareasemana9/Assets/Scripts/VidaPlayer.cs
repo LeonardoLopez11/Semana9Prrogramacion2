@@ -35,7 +35,7 @@ public class VidaPlayer : MonoBehaviour
 
     void Die()
     {
-        Trophies.Unlock(233701);
+        Trophies.TryUnlock(233701);
         SceneManager.LoadScene("Derrota");
     }
 }

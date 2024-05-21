@@ -1,3 +1,4 @@
+using GameJolt.API;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class ScreenEnd : MonoBehaviour
 {
-    public float delayBeforeCredits = 5f; 
+    public float delayBeforeCredits = 2f; 
 
     void Start()
     {
@@ -17,7 +18,7 @@ public class ScreenEnd : MonoBehaviour
     {
         
         yield return new WaitForSeconds(delayBeforeCredits);
-        
+        Trophies.Unlock(233703);
         SceneManager.LoadScene("Credits");
     }
 }

@@ -22,6 +22,7 @@ public class LevelManagerr : MonoBehaviour
         {
             if (Nivel2)
             {
+                Trophies.Unlock(233695);
                 LoadVictoryScene();
             }
             else
@@ -40,7 +41,7 @@ public class LevelManagerr : MonoBehaviour
 
     void LoadVictoryScene()
     {
-        Trophies.Unlock(233086);
+        
         SceneManager.LoadScene("Victory");
     }
 }
